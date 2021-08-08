@@ -5,7 +5,11 @@ This calculator strictly obeys the official published calculating method which c
 
 ### To start using…
 
-Open **Terminal** or **cmd** and run:
+[Download](https://github.com/SprLau/BUAA-GPA-Calculator/releases/tag/1.0) from **Releases**.
+
+> Currently, only Unix-like systems are supported.
+
+Or open **Terminal** or **cmd** and run:
 
 ```bash
 python buaa_gpa.py
