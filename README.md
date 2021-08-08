@@ -28,13 +28,19 @@ python buaa_gpa.py
    Social Computing
    90
    2
+   博雅
+   A
+   0.5
    ```
 
    where for each set of score: 
 
    * the first line is the ***course’s name***;
 
-   * the second line is the ***score***;
+   * the second line is the ***score***:
+
+     * if this is a 5-scale course, let `A` represents 优秀, `B` represents 良好, `C` represents 中等, `D` represents 及格, `E` represents 不及格;
+     * if this is a 100-percentile course, just type in your score out of 100.
 
    * and the third line is the corresponding ***credit***.
 
@@ -66,16 +72,16 @@ python buaa_gpa.py
    Filename: score.txt
    *** File Successfully Added. ***
    Option: 5
-   The GPA is: 3.9375
+   The GPA is: 3.9423
    ```
 
    As well as your average scores (weighted and raw):
 
    ```
    Option: 3
-   The Weighted Ave. : 96.6667
+   The Weighted Ave. : 96.9231
    Option: 4
-   The Raw Ave. : 95.0000
+   The Raw Ave. : 96.6667
    ```
 
 4. After the calculation is done, there will be a `store.txt` that records your history. In most of the cases, pay no attention to it unless you tryna check if there was a mis-input or something like that.
