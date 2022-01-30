@@ -18,7 +18,20 @@ class Calculator():
             'D': 1.7, 
             'E': 0
         }
+        self.quadra_scores = {
+            'A': 100, 
+            'B': 83.67, 
+            'C': 74.70, 
+            'D': 64.98, 
+            'E': 0
+        }
         self.gradebook = Gradebook()
+
+    def convert_score(self, _):
+        try:
+            return float(_)
+        except:
+            return self.quadra_scores[_]
 
     def single_gpa(self, score, mode):
         if mode == 'bin':
@@ -36,8 +49,19 @@ class Calculator():
             self.gradebook.add_grade(tem)
 
         nume = 0
+        wa_nume = 0
+        uwa_sum = 0
         denom = 0
         for grade in self.gradebook.grades:
             nume += grade.get_point() * self.single_gpa(grade.get_grade(), grade.get_mode())
+            wa_nume += grade.get_point() * self.convert_score(grade.get_grade())
+            uwa_sum += self.convert_score(grade.get_grade())
             denom += grade.get_point()
-        return nume / denom
+        
+        final_gpa = nume / denom
+        weighted_ave = wa_nume / denom
+        unweighted_ave = uwa_sum / len(self.gradebook.grades)
+
+        print("====================== BUAA GPA Calculator ======================")
+        print("  GPA: {:4.2f}     Weighted Ave.: {:5.2f}     Unweighted Ave.: {:5.2f}  ".format(final_gpa, weighted_ave, unweighted_ave))
+        print("=================================================================")

@@ -11,7 +11,8 @@
 #########################################################
 
 import src.Calculator
+import sys
 
-calculator = src.Calculator.Calculator("gradebook.txt")
+calculator = src.Calculator.Calculator(sys.argv[1])
 
-print(calculator.calculate())
+calculator.calculate()

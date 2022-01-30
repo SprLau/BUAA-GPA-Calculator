@@ -8,7 +8,7 @@
 
 ## 写入成绩
 
-1. 编辑`gradebook.txt`：
+1. 编辑`gradebook.txt`或新建一个文本文件：
 
    对于每一科成绩，4行为一组：
 
@@ -51,14 +51,18 @@
 打开终端运行：
 
 ```bash
-python buaa_gpa.py
+python buaa_gpa.py gradebook.txt
 ```
+
+若为自建文本文件，则将命令行中`gradebook.txt`置换。
 
 **一个例子**：
 
 ```bash
-springs@MacBook-Pro BUAA-GPA-Calculator % python buaa_gpa.py
-3.893676470588235
-springs@MacBook-Pro BUAA-GPA-Calculator %
+(base) springs@MacBook-Pro BUAA-GPA-Calculator % python buaa_gpa.py gradebook.txt
+====================== BUAA GPA Calculator ======================
+  GPA: 3.65     Weighted Ave.: 87.59     Unweighted Ave.: 87.49  
+=================================================================
+(base) springs@MacBook-Pro BUAA-GPA-Calculator % 
 ```
 
