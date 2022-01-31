@@ -13,6 +13,8 @@
 import src.Calculator
 import sys
 
-calculator = src.Calculator.Calculator(sys.argv[1])
-
-calculator.calculate()
+try:
+    calculator = src.Calculator.Calculator(sys.argv[1])
+    calculator.calculate()
+except IndexError:
+    print("*** Please Specify a Gradebook File!!! ***")
